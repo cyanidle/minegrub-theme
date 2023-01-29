@@ -2,7 +2,7 @@
 # Set working directory to script's location
 cd "${0%/*}"
 count=0
-for f in *.png; do
+for f in enumerated/*.png; do
 	count=$((++count))
 done
 current_number=$(cat current_number) 
@@ -14,9 +14,12 @@ if [[ $(date +%d%m) -eq 2812 ]]; then
 	cp ./birthday.png ../logo.png
 	exit
 fi
-if (( wanted_number > count )); then
+echo count = $count
+echo wanted_number = $wanted_number
+if (( wanted_number >= count - 1 )); then
+	echo Resetting current_number
 	wanted_number=0
 fi
-# Remove logo from main folder and rename it to sit at bottom of the rotation, put the lowest value image back in its place.
-mv ../logo.png $(printf %02d $(($count))).png
-mv ./00.png ../logo.png
+cp enumerated/$wanted_number.png ../logo.png
+echo $wanted_number > current_number
+
