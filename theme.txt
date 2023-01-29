@@ -49,7 +49,7 @@ terminal-font: "Unknown Regular 16"
 	# n is amount of boot options (each element is (42 height + 30 spacing) = 72px in height) 
 	# top = 40%+( 72 * N + 26 )
 	############### CHANGE VALUE HERE ################
-	top = 40%+314
+	top = 40%+386
 	##################################################
 
 	file = "static_bar.png"
@@ -93,7 +93,7 @@ terminal-font: "Unknown Regular 16"
 	height = 54
 	width = 200
 
-	text = "647 Packages Installed"
+	text = "Mihaba Bondargushi Dishi APPROVED"
 	font = "Minecraft Regular 30"
 	color = "white"
 }
@@ -105,7 +105,7 @@ terminal-font: "Unknown Regular 16"
 	height = 54
 	width = 200
 
-	text = "647 Packages Installed"
+	text = "Mihaba Bondargushi Dishi APPROVED"
 	font = "Minecraft Regular 30"
 	color = "#3f3f3f"
 }
