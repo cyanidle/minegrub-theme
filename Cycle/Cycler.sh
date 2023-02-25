@@ -10,7 +10,6 @@ wanted_number=$((++current_number))
 # Linus' Birthday logic
 # If birthday file is present, check the date, and use it as the logo if it's Linus's birthday. End the script early.
 if [[ $(date +%d%m) -eq 2812 ]]; then
-	rm ../logo.png
 	cp ./birthday.png ../logo.png
 	exit
 fi
